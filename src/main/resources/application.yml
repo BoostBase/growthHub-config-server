@@ -1,0 +1,14 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${GITHUB_URL}
+          username: ${GITHUB_USERID}
+          password: ${GITHUB_TOKEN}
+        encrypt:
+          enabled: false
